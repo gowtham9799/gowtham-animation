@@ -1,0 +1,532 @@
+@import url('https://fonts.googleapis.com/css2?family=Anybody&family=Beau+Rivage&family=Bebas+Neue&family=Lato&family=Lavishly+Yours&family=Lobster&family=Montserrat:wght@100&display=swap');
+$textcolor:white;
+$backcolor:black;
+$font-style:Montserrat;
+$border:5px solid goldenrod;
+$fontweight:700;
+$shadow:1px 1px 4px black;
+@mixin display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin backposition {
+    background-position: center;
+    background-size: cover;
+}
+@mixin gowtham {
+    position: absolute;
+    content: '';
+    width: 28%;
+    height: 91%;
+    left: 50%;
+    border:$border;
+    background: url("./components/reactimages/pexels-rachel-claire-4577791.jpg");
+    @include backposition;
+    opacity: 0;
+    transition: 1s;
+}
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+.navbar-section{
+    .navbar{
+        background-color: $backcolor !important;
+        border-bottom: 3px solid rgb(255, 238, 0) !important;
+    }
+}
+//body-section-1
+.body-section{
+    overflow: hidden;
+    position: relative;
+    background-color: $backcolor;
+    background:linear-gradient(to right,rgba(63, 56, 102, 0.584),rgba(22, 27, 56, 0.573)),url("./components/reactimages/pexels-tyler-lastovich-772803.jpg");
+    @include backposition;
+    background-attachment: fixed;
+    padding: 6%;
+    .bannerimage-box{
+        width: 100%;
+        height: 100%;
+        cursor: pointer;
+        box-shadow: $shadow;
+        .bannerimage{
+           width: 100%;
+           height: 100%;
+        }
+    }
+    .bannercontent-box{
+        height: 100%;
+        border:$border;
+        padding: 10px;
+        .tittle{
+          font-family: Montserrat;
+          font-weight:$fontweight;
+    }
+         .learnmore{
+        text-decoration: none;
+        color: white;
+        background-color: $backcolor;
+        font-weight: 700;
+        border: 1px solid white;
+        padding: 5px;
+        transition: .4s;
+        display: inline-block;
+        margin-top: 19%;
+        &:hover{
+            background-color:transparent;
+            box-shadow:3px 3px 0px goldenrod;
+            color:goldenrod;
+            transition: .5s all;
+           }
+       }  
+    }
+}
+//body-section-2
+.body-section2{
+    background-color:$backcolor;
+    padding: 3%;
+    .b2-contentbox{
+    @include display;
+    width: 100%;
+    height: 100%;
+    border:$border;
+    h1{
+        font-family: $font-style;
+        font-weight: $fontweight;
+    }
+    }
+    .b2-contentbox-2{
+      h1{
+        font-family: $font-style;
+        font-weight: $fontweight;
+      }
+      .readmore{
+        text-decoration: none;
+        text-transform: uppercase;
+        font-weight: 700;
+        border-bottom: 2px solid goldenrod;
+        color: white;
+        &:hover{
+            color:goldenrod;
+            transition: .4s;
+        }
+    }
+    }  
+}
+//body-section-3
+.body-section3{
+    padding:8%;  
+    background-image: url("./components/reactimages/pexels-tyler-lastovich-772803.jpg");
+    @include backposition;
+    background-attachment: fixed;
+    .b-3{
+        display: inline-flex;
+        justify-content: end;
+        .b3-box{
+            border:$border;
+            padding: 10px;
+            margin-top: -6%;
+            background-color:$backcolor;
+            box-shadow: 29px -11px 0px goldenrod, -29px -11px 0px goldenrod;
+
+            h1{
+                font-family: $font-style;
+                font-weight: $fontweight;
+                width:79%;
+                text-align: center;
+                margin: 0 auto;
+            }
+            p{
+                width:75%;
+                text-align: center;
+                margin: 0 auto;
+            }
+            .b3-switch{
+                @include display;
+                .readmore{
+                    text-decoration: none;
+                    text-transform: uppercase;
+                   font-weight:$fontweight;
+                   border-bottom: 2px solid goldenrod;
+                    color: white;
+                    &:hover{
+                   color:goldenrod;
+                   transition: .4s;
+                  }
+                   }
+            }
+            
+        }
+    }
+}
+//body-section-4
+.body-section4{
+    background-color:$backcolor;
+    @include display;
+    padding: 4%;  
+    .b-4content-box{
+    width: 62%;
+    h1{
+        font-family: $font-style;
+        font-weight: $fontweight;
+    }
+}
+}
+//body-section-5
+.body-section5{
+    background-color:$backcolor;
+    padding: 4%;
+    .imagegallery{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        img{
+            padding: 4px;
+            transition: .5s;  
+            &:hover{        
+                transform: scale(1.2);
+                transition:.5s;
+            }
+           }
+    }
+    .buttonbox{
+        @include display;
+        .viewmore{
+            text-decoration: none;
+            color:white;
+            font-weight:$fontweight;
+            border: 1px solid goldenrod;
+            padding: 10px;
+            margin-top: 10px;
+            transition: .4s;
+            &:hover{
+                transform: .5s;
+               background-color: goldenrod;
+                 color:$backcolor;
+            }
+        }
+    }
+}
+//body-section-6
+.body-section6{
+    background-color:$backcolor;
+    padding: 9%;
+    position: relative;
+    z-index: 1;
+    .row{
+        @include display;
+        .b6-contentbox{
+            border:$border;
+            width: 75%;
+            padding: 10%;
+            margin: 0 auto;
+            position: relative;
+            h1{
+                text-align: center;
+                font-family:$font-style;
+                font-weight: $fontweight;
+            }
+            &::before{
+                position: absolute;
+                content: '';
+                width: 100%;
+                height: 120%;
+                top: -11%;
+                left: -30%;
+                background:linear-gradient(to right,rgba(165, 42, 42, 0.505),rgba(0, 0, 0, 0.623)),url("./components/reactimages/pexels-ray-bilcliff-2055389.jpg");
+                @include backposition;
+                z-index: -1;
+                transition: 1s;
+            }
+            &::after{
+                position: absolute;
+                content: '';
+                 width: 52%;
+                 height: 134%;
+                 top: -18%;
+                 z-index: -2;
+                 left: -20%;
+                 border: 7px solid goldenrod;
+                 transition: 1s;
+            }
+            &:hover{
+                box-shadow: inset 4px -3px 7px goldenrod, inset -4px 5px 9px goldenrod;
+                transition: .6s;
+            }
+            &:hover::after{
+                opacity: 0;
+                height: 0%;
+                left: 0%;
+                transition:.6s;
+            }
+            &:hover::before{
+                opacity: 0;
+                left: 0%;
+                transition: .6s;
+            }
+        }
+    }
+    .b6-view{
+        text-decoration: none;
+        color: white;
+        font-weight:$fontweight;
+        border-bottom: 2px solid goldenrod;
+    }
+}
+//body-section-7
+.body-section7{
+    background-color:$backcolor;
+    padding: 4%;
+    .column{
+        padding: 0% !important;
+        .image-1{
+            width: 100%;
+            img{
+                width: 100%;
+            }
+        }
+        .box-1{
+            transition: .6s;
+            &:hover{
+                transform: translateY(-10px);
+                transition: .4s;
+            }
+            .para{
+                background-color: dimgray;
+                padding: 5px;
+                margin-top: -24px;
+            }
+        }
+    }    
+}
+//body-section-8
+.body-section8{
+    background-color:$backcolor;
+    padding:20%;
+    position: relative;
+    z-index:1;
+    .b8-contentbox{
+        border:$border;
+        padding: 13%;
+        position: relative;
+        transition: .4s;
+        &:hover{
+        transition: .3s;
+         box-shadow: inset 4px -3px 7px goldenrod, inset -4px 5px 9px goldenrod;
+        }
+        &:hover::after{
+            opacity: 0;
+           transition: .3s;
+        }
+        &:hover::before{
+            opacity: 0;
+           transition: .5s;
+        }
+       &::after{
+        position: absolute;
+        content: '';
+        width: 84%;
+        height:114%;
+       background:url("./components/reactimages/pexels-tyler-lastovich-772803.jpg");
+       @include backposition;
+       top: -8%;
+       right: -32%;
+       z-index: -2;
+       }
+       &::before{
+        position: absolute;
+        content: '';
+        width: 83%;
+        height: 114%;
+        top: -8%;
+        left: -35%;
+        background:url("./components/reactimages//pexels-nick-wehrli-5282269.jpg");
+        @include backposition;
+        z-index: -2;
+       }
+       h1{
+        background:linear-gradient(to left,rgb(244, 176, 6),rgb(243, 239, 239));
+        -webkit-background-clip: text;
+        color: transparent !important;
+       }
+       .b6-view{
+        text-decoration: none;
+        color: white;
+        font-weight:$fontweight;
+        border-bottom: 2px solid goldenrod;
+       }
+    }
+}
+//body-seciton-9
+.base-section9{
+    background-color:$backcolor;
+    padding: 2%;
+    .b9-contentbox{
+        border:$border;
+        h1{
+            font-family:$font-style;
+            font-weight: $fontweight;
+        }
+    }
+    .center-col{
+        @include display;
+      p{
+        text-align: center;
+    }
+  }
+       .form-box{
+             display: flex;
+             padding: 3px;
+      .formcontrol{
+             border-radius:unset;
+           }
+           .submit{
+            border-radius: unset;
+            outline: none;
+            background-color: transparent;
+            color: white;
+            border: 1px solid goldenrod;
+            padding: 5px;
+            margin-left: 10px;
+            &:hover{
+                background-color: goldenrod;
+            }
+        }
+       }      
+}
+//footersection
+.footer-section{
+    display: flex;
+    justify-content: space-between;
+   padding: 5%;
+   background:linear-gradient(to right,rgba(0, 0, 0, 0.853),rgba(27, 21, 21, 0.766)),url("./components/reactimages/pexels-rachel-claire-4577791.jpg");
+   @include backposition;
+   .footercontent-box{
+    position: relative;
+       h1{
+        margin-left: 44px;
+        background: url("./components//reactimages/pexels-ray-bilcliff-2055389.jpg");
+        @include backposition;
+        font-size: 46px;
+        -webkit-background-clip: text;
+        color: transparent;
+     }
+    &:hover::before{
+        left:-13%;
+        opacity:1;
+        transition: .7s;
+    }
+    &::before{
+        @include gowtham();
+    }
+  }
+}
+// form-section
+.red{
+    color: red;
+}
+.green{
+    color: green;
+}
+.form-section{
+    padding-top: 6%;
+    background-color: $backcolor;
+   .container{
+    @include display;
+    .form-box{
+        width:75%;
+        padding: 6%;
+        border: $border;
+        background: linear-gradient(to bottom,rgba(251, 209, 21, 0.414),rgba(19, 24, 5, 0.364));
+        span{
+            color: white;
+        }
+        .tittle{
+            h1{
+              -webkit-text-stroke: .5px rgb(245, 241, 12);
+              text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.314);
+              border-bottom: 1px solid $backcolor;
+              color: transparent;
+          }
+        }
+        .lable{
+            text-transform: uppercase;
+            font-family: $font-style;
+            font-weight:800;
+            color: rgb(252, 252, 22);
+        }
+        .formcontrol{
+            border-radius: unset;
+            border: none;
+            // box-shadow: inset 1px 1px 10px rgba(174, 164, 164, 0.708),inset -1px -1px 10px rgba(170, 158, 158, 0.511);
+            background-color: transparent;
+            border-bottom: 1px solid white;
+             color: white;
+        }
+        .btn-box{
+            @include display;
+            .button{
+                border-radius:unset;
+                text-transform: capitalize;
+            }
+        }
+    }
+   }
+       .maincar{
+           width: 100%;
+           height:347px;
+           @include display;
+           .cardsection {
+               width:24%;
+               padding:2%;
+               height: 129px;
+               overflow: hidden;
+               transition: 1s;
+               background-color: goldenrod;
+               clip-path: polygon(82% 87%, 23% 0, 0 0, 0 68%, 0 100%, 19% 100%, 18% 22%, 65% 100%, 100% 100%, 100% 26%, 100% 0, 82% 0);
+               &:hover{
+                transition:.4s;
+                width: 60%;
+                height:350px;
+                background-color: rgba(238, 255, 0, 0.455) !important;
+                clip-path: polygon(35% 0, 0 0, 0 55%, 0 100%, 32% 100%, 65% 100%, 65% 100%, 100% 100%, 100% 55%, 100% 0, 72% 0, 53% 0);
+             }
+               .dummy{
+                   width: 50%;
+                   height: 100px;
+                   margin: 0 auto;
+                //    background-color: $backcolor;
+                   background: url("./components/reactimages/pexels-rachel-claire-4577791.jpg");
+                   @include backposition;
+                   
+               }
+               .more{
+                @include display;
+                a{
+                    text-decoration: none;
+                    text-transform: capitalize;
+                }
+               }
+           }
+       }
+}
+    h4{
+            text-transform: capitalize;
+            text-align: center;
+            padding: 8%;
+        }
+// adminsection
+.resultbox{
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .final{
+        width: 50%;
+    height: 400px;
+    background-color: yellow;
+    }
+}
